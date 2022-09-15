@@ -1,9 +1,11 @@
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "terraform-up-and-running-state-kk1512"  # Enable versioning so we can see the full revision history of our
-  # state files
+  bucket = "terraform-up-and-running-state-kk1512"  
+  # Enable versioning so we can see the full revision history of our state files
   versioning {
     enabled = true
-  }  # Enable server-side encryption by default
+  }  
+  
+  # Enable server-side encryption by default
   
   server_side_encryption_configuration {
     rule {
